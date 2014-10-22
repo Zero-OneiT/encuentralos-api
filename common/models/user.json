@@ -1,0 +1,19 @@
+{
+  "name": "user",
+  "base": "User",
+  "properties": {
+    "username": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "pets": {
+      "type": "hasMany",
+      "model": "pet",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
