@@ -13,6 +13,7 @@
     "helmet": "^0.4.2",
     "loopback": "^2.0.0",
     "loopback-boot": "^2.0.0",
+    "loopback-component-passport": "^1.0.6",
     "loopback-connector-mongodb": "^1.4.4",
     "loopback-datasource-juggler": "^2.7.0",
     "serve-favicon": "^2.0.1"

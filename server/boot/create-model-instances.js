@@ -4,9 +4,10 @@ module.exports = function(app){
 		Role = app.models.Role,
 		RoleMapping = app.models.RoleMapping;
 
-	User.create({
-		username: 'dresendez', email: 'aion.chrno@gmail.com', password:'olakease'
-	}, function(err, user){
+	User.create([
+		{username: 'admin', email: 'admin@local.com', password:'olakease'},
+		{username: 'dresendez', email: 'aion.chrno@gmail.com', password:'diego4rmando'}
+	], function(err, user){
 		if (err) return debug('%j', err);
 
 		debug(user);
@@ -19,13 +20,14 @@ module.exports = function(app){
 
 			role.principals.create({
 				principalType: RoleMapping.USER,
-				principalId:user.id
+				principalId:user[0].id
 			}, function(err, principal){
 				if(err) return debug('%j', err);
 				debug(principal);
 
 			});
 		});
+
 	});
 
 };

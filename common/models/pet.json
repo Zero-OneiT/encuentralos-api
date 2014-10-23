@@ -1,6 +1,6 @@
 {
-  "name": "pet",
-  "plural": "pets",
+  "name": "Pet",
+  "plural": "Pets",
   "base": "PersistedModel",
   "properties": {
     "name": {
@@ -20,27 +20,14 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "DENY"
-    },
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "admin",
-      "permission": "ALLOW",
-      "property": "find"
-    },
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW"
     },
     {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "admin",
-      "permission": "ALLOW"
+      "principalId": "$everyone",
+      "permission": "DENY"
     }
   ],
   "methods": []
