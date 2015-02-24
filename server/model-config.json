@@ -32,5 +32,9 @@
   "Pet": {
     "dataSource": "db",
     "public": true
+  },
+  "caracteristica": {
+    "dataSource": "db",
+    "public": false
   }
 }
